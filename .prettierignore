@@ -1,1 +1,8 @@
 *.d.ts
+node_modules
+dist
+webpack
+doc
+.eslintrc.js
+webpack.config.babel.js
+.vscode

@@ -5,12 +5,13 @@ import React, {CSSProperties} from 'react';
 
 import StrawberryIcon from '@images/strawberry.component.svg';
 
-export default ({
-    style,
-    className,
-}: {
-    style?: CSSProperties;
-    className?: string;
-}): React.ReactElement => (
-    <StrawberryIcon className={className} style={style} />
+export interface IProperties {
+  style?: CSSProperties;
+  className?: string;
+}
+
+const StrawBerry = ({style, className}: IProperties): React.ReactElement => (
+  <StrawberryIcon className={className} style={style} />
 );
+
+export default StrawBerry;

@@ -1,7 +1,7 @@
 /**
  * Created by: Andrey Polyakov (andrey@polyakov.im)
  */
-const {argv} = require('yargs');
+const { argv } = require('yargs');
 
 module.exports = (api) => {
     const env = argv.env || [];
