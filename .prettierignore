@@ -1,8 +1,8 @@
-*.d.ts
 node_modules
 dist
 webpack
 doc
+*.d.ts
 .eslintrc.js
 webpack.config.babel.js
 .vscode
