@@ -1,3 +1,10 @@
+/**
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-15 11:54:13
+ * @LastEditTime: 2020-12-15 15:19:32
+ * @LastEditors: ilove523
+ * @description:
+ */
 module.exports = {
   extends: [
     'stylelint-config-standard',

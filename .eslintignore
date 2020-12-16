@@ -2,7 +2,7 @@ node_modules
 dist
 webpack
 doc
-*.d.ts
+src/components/app/*.d.ts
 .eslintrc.js
 webpack.config.babel.js
 .vscode

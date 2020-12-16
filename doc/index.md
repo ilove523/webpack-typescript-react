@@ -379,6 +379,30 @@ module.exports = {
 /.vscode
 ```
 
+#### 重设代码行宽度限制规则
+![max-len报错](./images/365e1226ef9372e4fa01d6966288ba5b12f39a817164b8921921136341d1fd31.png)  
+
+在 `.eslintrc.js`中增加以下规则：
+```js
+module.exports = {
+  rules: {
+    // 增加对代码行宽度的限制
+    'max-len': [
+      'error',
+      {
+        code: 120
+      },
+    ],
+  },
+}
+```
+
+同时在`.prettierrc`中增加：
+```js
+"printWidth": 120,
+```
+
+
 ## StyleLint 规范 CSS 样式风格
 
 参考：
@@ -598,7 +622,7 @@ yarn add -D husky lint-staged
 yarn add -D @commitlint/cli @commitlint/config-conventional
 ```
 
-2. 在项目更目录新建配置文件 `.commitlintrc.js`，具体配置内容如下：
+2. 在项目根目录新建配置文件 `.commitlintrc.js`，具体配置内容如下：
 
 ```js
 module.exports = {

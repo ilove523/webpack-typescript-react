@@ -1,11 +1,16 @@
 /**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-15 11:54:13
+ * @LastEditTime: 2020-12-16 09:10:48
+ * @LastEditors: ilove523
+ * @description: ''
  */
+
 import path from 'path';
 
 import { aliasItems, devServerUrl, externalItems } from './config';
 import entry from './entry';
-import optimization from './optimization';
+import optimizer from './optimization';
 import * as plugins from './plugins';
 import * as rules from './rules';
 import { isDevServer, isProd } from './utils/env';
@@ -48,6 +53,6 @@ export default {
         alias: aliasItems,
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
-    optimization,
+    optimization: optimizer,
     externals: externalItems,
 };

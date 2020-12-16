@@ -1,6 +1,11 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
+/*
+ * @Author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-15 11:54:13
+ * @LastEditTime: 2020-12-15 14:33:17
+ * @LastEditors: ilove523
+ * @Description:
  */
+
 import '@styles/styles.less';
 import '@styles/styles.scss';
 

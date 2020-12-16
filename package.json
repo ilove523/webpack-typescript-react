@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:glook/webpack-typescript-react.git"
+    "url": "git@github.com:ilove523/webpack-typescript-react.git"
   },
   "license": "MIT",
-  "author": "Andrey Polyakov <andrey@polyakov.im>",
+  "author": "ilove523 <wush3w@126.com>",
   "main": "webpack.config.babel.js",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
@@ -28,11 +28,20 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js}": ["eslint --config .eslintrc.js"],
-    "*.{css,less,scss}": ["stylelint --config .stylelintrc.js"],
-    "*.{ts,tsx,js,json,html,yml,css,less,scss}": ["prettier --write"]
+    "*.{ts,tsx,js}": [
+      "eslint --config .eslintrc.js"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --config .stylelintrc.js"
+    ],
+    "*.{ts,tsx,js,json,html,yml,css,less,scss}": [
+      "prettier --config .prettierrc"
+    ]
   },
   "dependencies": {
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
+    "@material-ui/core": "^5.0.0-alpha.19",
     "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
@@ -114,6 +123,7 @@
     "terser-webpack-plugin": "~5.0.1",
     "ts-loader": "~8.0.7",
     "typescript": "~4.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "~4.1.1",
     "webpack": "~5.4.0",
     "webpack-bundle-analyzer": "~4.1.0",

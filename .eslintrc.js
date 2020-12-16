@@ -1,5 +1,9 @@
 /**
- * @author ilove523 <wush3w@126.com>
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-15 11:54:13
+ * @LastEditTime: 2020-12-15 15:12:46
+ * @LastEditors: ilove523
+ * @description: ''
  */
 
 const path = require('path');
@@ -33,6 +37,13 @@ module.exports = {
     },
     rules: {
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+        // 增加对代码行宽度的限制
+        'max-len': [
+            'error',
+            {
+                code: 120
+            },
+        ],
         // 避免在 .ts 和 .tsx 文件中引入另一个文件模块会报错
         'import/extensions': [
             'error',

@@ -10,6 +10,9 @@ import {isProd, rootDir, webpackDir} from '../utils/env';
 
 export const cssLoader = {
     loader: 'css-loader',
+    options: {
+        modules: true,
+    }
 };
 
 /**
@@ -44,7 +47,7 @@ export const postCssLoader = {
     },
 };
 
-/***
+/**
  * Using MiniCssExtractPlugin in production or style-loader in development
  * @see https://webpack.js.org/plugins/mini-css-extract-plugin/#root
  * @see https://webpack.js.org/loaders/style-loader/#root
