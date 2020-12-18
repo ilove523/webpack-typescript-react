@@ -1,7 +1,11 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
+/*
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-11-27 17:34:38
+ * @LastEditTime: 2020-12-17 11:22:23
+ * @LastEditors: ilove523
+ * @description: ''
  */
-import {babelLoader} from './useLoaderRuleItems';
+import { babelLoader, imageUrlLoader } from './useLoaderRuleItems';
 
 /**
  * @see https://webpack.js.org/guides/typescript/#loader
@@ -19,7 +23,7 @@ export const typescriptRule = {
  */
 export const javascriptRule = {
     test: /\.(js|jsx)$/,
-    use: [babelLoader],
+    use: [ babelLoader ],
     exclude: /node_modules/,
 };
 
@@ -38,6 +42,8 @@ export const htmlRule = {
 export const imagesRule = {
     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
     type: 'asset/resource',
+    use: [ imageUrlLoader ],
+    
 };
 /**
  * @see https://webpack.js.org/guides/asset-modules/

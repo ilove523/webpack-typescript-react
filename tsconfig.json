@@ -1,31 +1,35 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "module": "esnext",
-        "target": "es5",
-        "lib": ["esnext", "dom", "dom.iterable"],
-        "sourceMap": true,
-        "allowJs": true,
-        "jsx": "react",
-        "moduleResolution": "node",
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "resolveJsonModule": true,
-        "strict": true,
-        "strictNullChecks": true,
-        "baseUrl": "./",
-        "rootDir": "./",
-        "typeRoots": ["./node_modules/@types", "./src/@types"],
-        "paths": {
-            "@src/*": ["src/*"],
-            "@images/*": ["src/images/*"],
-            "@styles/*": ["src/styles/*"],
-            "@components/*": ["src/components/*"]
-        },
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "importsNotUsedAsValues": "preserve"
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "paths": {
+      "@src/*": ["src/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@styles/*": ["src/styles/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@app/*": ["src/app/*"],
+      "@service/*": ["src/service/*"],
+      "@routers/*": ["src/routers/*"],
+      "@assets/*": ["src/assets/*"],
+      "@i18n/*": ["src/i18n/*"]
     },
-    "exclude": ["node_modules", "webpack"]
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "preserve"
+  },
+  "exclude": ["node_modules", "webpack"]
 }

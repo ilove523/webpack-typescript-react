@@ -1,8 +1,9 @@
 node_modules
 dist
-webpack
 doc
 src/components/app/*.d.ts
 .eslintrc.js
 webpack.config.babel.js
 .vscode
+confirm
+webpack

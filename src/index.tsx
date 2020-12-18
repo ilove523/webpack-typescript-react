@@ -1,17 +1,42 @@
-/*
- * @Author: ilove523 <wush3w@126.com>
- * @Date: 2020-12-15 11:54:13
- * @LastEditTime: 2020-12-15 14:33:17
- * @LastEditors: ilove523
- * @Description:
- */
+// import * as serviceWorker from './serviceWorker';
+import '@assets/fonts/Lobster 1.4.otf';
+// import 'react-toastify/dist/ReactToastify.css';
 
-import '@styles/styles.less';
-import '@styles/styles.scss';
+import './index.scss';
+import './i18n';
 
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { store } from '@app/store';
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { Provider } from 'react-redux';
+// import { ToastContainer, toast } from 'react-toastify';
 
-import App from '@components/app/app';
+import App from './app';
 
-ReactDom.render(<App />, document.querySelector('#root'));
+const uri = process.env.REACT_APP_API_BASE_URL;
+const client = new ApolloClient({
+  uri,
+  cache: new InMemoryCache(),
+});
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <HelmetProvider>
+          <App />
+          {/* <ToastContainer /> */}
+        </HelmetProvider>
+      </Provider>
+    </ApolloProvider>
+  </React.StrictMode>,
+
+  document.querySelector('#root'),
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();

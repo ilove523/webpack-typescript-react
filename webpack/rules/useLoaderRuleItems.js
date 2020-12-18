@@ -16,6 +16,18 @@ export const cssLoader = {
 };
 
 /**
+ * @see https://webpack.docschina.org/loaders/url-loader
+ */
+export const imageUrlLoader = {
+    loader: 'url-loader',
+    options: {
+        limit: 10 * 1024,
+        name: '[name].[contenthash:8].[ext]',
+        outputPath: 'assets/images',
+    },
+};
+
+/**
  * Sass loader with sass-resources-loader
  */
 export const sassLoaderItems = [
@@ -99,6 +111,7 @@ export const resolveUrlLoader = {
     loader: 'resolve-url-loader',
     options: {
         sourceMap: true,
+        removeCR: true
     },
 };
 

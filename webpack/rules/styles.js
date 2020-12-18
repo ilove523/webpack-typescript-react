@@ -1,3 +1,10 @@
+/*
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-11-27 17:34:38
+ * @LastEditTime: 2020-12-18 17:48:47
+ * @LastEditors: ilove523
+ * @description: ''
+ */
 /**
  * Created by: Andrey Polyakov (andrey@polyakov.im)
  */
@@ -16,7 +23,12 @@ import {
 /** css **/
 export const cssRule = {
     test: /\.css$/,
-    use: [miniCssExtractLoader, postCssLoader, resolveUrlLoader, cssLoader],
+    use: arrayFilterEmpty([
+        miniCssExtractLoader,
+        postCssLoader,
+        resolveUrlLoader,
+        cssLoader
+    ]),
 };
 
 /** less **/

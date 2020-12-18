@@ -1,7 +1,7 @@
-/**
+/*
  * @author: ilove523 <wush3w@126.com>
- * @Date: 2020-12-15 11:54:13
- * @LastEditTime: 2020-12-15 15:12:46
+ * @Date: 2020-12-17 14:58:08
+ * @LastEditTime: 2020-12-18 16:08:38
  * @LastEditors: ilove523
  * @description: ''
  */
@@ -14,7 +14,7 @@ module.exports = {
     env: {
         browser: true,
         node: true,
-        es2021: true,
+        es6: true,
     },
     extends: [
         'airbnb',
@@ -36,7 +36,37 @@ module.exports = {
         },
     },
     rules: {
-        // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+        // 关闭 ESLint 驼峰规则校验
+        camelcase: 'off',
+        'unicorn/filename-case': [
+            'error',
+            {
+                'cases': {
+                    'kebabCase': false,
+                    'camelCase': false,
+                    'pascalCase': false
+                }
+            }
+        ],
+        'no-console': [
+            "error",
+            {
+                allow: [
+                    'log',
+                    'warn',
+                    'error',
+                ],
+            }
+        ],
+        '@typescript-eslint/camelcase': 0,
+        // https://github.com/typescript-eslint/typescript-eslint/blob/v4.7.0/packages/eslint-plugin/docs/rules/no-empty-interface.md
+        // This rule will silence warnings about extending a single interface without adding additional members
+        '@typescript-eslint/no-empty-interface': [
+            'error',
+            {
+                'allowSingleExtends': true,
+            }
+        ],
         // 增加对代码行宽度的限制
         'max-len': [
             'error',
@@ -55,6 +85,40 @@ module.exports = {
                 js: 'never',
             },
         ],
+        // 源码中使用单引号
+        'jsx-quotes': [
+            'error',
+            'prefer-single',
+        ],
+        // @see https://cloud.tencent.com/developer/section/1135795
+        'object-curly-newline': [
+            'error',
+            {
+                // 'ObjectExpression': 'always',
+                // 'ObjectPattern': 'never',
+                'consistent': true,
+            },
+        ],
+        // @see http://www.verydoc.net/eslint/00003358.html
+        'implicit-arrow-linebreak': [
+            'error',
+            'beside',
+        ],
+        // @see https://eslint.org/docs/rules/no-shadow
+        'no-shadow': [
+            'error',
+            {
+                'builtinGlobals': false,
+                'hoist': 'functions',
+                'allow': [
+                    'Lang',
+                    'Theme',
+                    'ThemeOptions',
+                    'TypographyOptions',
+                ],
+
+            },
+        ],
         'no-use-before-define': 'off',
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -65,7 +129,6 @@ module.exports = {
         'react/no-deprecated': 'off',
         'react/no-string-refs': 'off',
         'react/require-render-return': 'off',
-
         'react/jsx-filename-extension': [
             'warn',
             {
@@ -83,7 +146,8 @@ module.exports = {
             typescript: {},
         },
         react: {
-            version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+            // Tells eslint-plugin-react to automatically detect the version of React to use
+            version: 'detect',
         },
     },
 };
