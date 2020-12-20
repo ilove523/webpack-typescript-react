@@ -8,7 +8,7 @@
 // import i18next from 'i18next'
 import Cookies from 'js-cookie';
 import { EnumValues } from 'enum-values';
-import { COOKIE_LANG, Lang, DEFAULT_LANG } from '@i18n/consts';
+import { COOKIE_LANG, Lang, DEFAULT_LANG } from '../consts';
 
 export function setLang(nextLang: Lang): void {
   const preLang = getLang();

@@ -25,10 +25,9 @@ export const topNav = createSlice({
   name: 'navBar',
   initialState: initialSliceState,
   reducers: {
-    /* eslint no-param-reassign: ["error", { "props": true }] */
     setType(state: State, action: Action) {
-      // @TODO: 有错误，暂时屏蔽
-      // state.type = action.payload.type;
+      // eslint-disable-next-line no-param-reassign
+      state.type = action.payload.type;
     },
   },
 });

@@ -1,14 +1,14 @@
 import Button from '@material-ui/core/Button';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import { I18N, I18N_NS } from '@pages/_i18n';
-import { Login_PAGE_URL } from '@pages/Login';
+import { LOGIN_PAGE_URL } from '@pages/Login';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { State } from '@src/app/slices/top-nav';
-import { selectTopNav } from '@src/service/top-nav.service';
+import { State } from '@app/slices/top-nav';
+import { selectTopNav } from '@service/top-nav.service';
 
 import Language from '@components/Language';
 
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 }));
 
 const getLogout = () => {
-  window.location.href = Login_PAGE_URL;
+  window.location.href = LOGIN_PAGE_URL;
 };
 
 const TopNav = (): React.ReactElement => {

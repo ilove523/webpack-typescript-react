@@ -35,6 +35,22 @@ module.exports = (api) => {
             '@babel/proposal-object-rest-spread',
             // Applies the react-refresh Babel plugin on non-production modes only
             mode !== 'production' && 'react-refresh/babel',
+            // [
+            //   "module-resolver",
+            //   {
+            //     "root": ["./src"],
+            //     "alias": {
+            //       "@styles": "./styles",
+            //       "@components": "./components",
+            //       "@pages": "./pages",
+            //       "@app": "./app",
+            //       "@service": "./service",
+            //       "@routers": "./routers",
+            //       "@assets": "./assets",
+            //       "@i18n": "./i18n",
+            //     }
+            //   }
+            // ],
         ].filter(Boolean),
     };
 };

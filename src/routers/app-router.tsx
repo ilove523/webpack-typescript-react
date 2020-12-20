@@ -15,7 +15,7 @@ import {
 } from 'react-router-dom';
 
 import MainFrame from '@components/MainFrame';
-import { Home, Home_PAGE_URL } from '@pages/Home';
+import { Home, HOME_PAGE_URL } from '@pages/Home';
 /**
  * Using `XXX_PAGE_URL` path constants:
  * Pros: get rid of the fragile string literals
@@ -23,7 +23,7 @@ import { Home, Home_PAGE_URL } from '@pages/Home';
  *             avoid circular dependency & good for split chunks + lazy load
  */
 // import { Management, HOME_PAGE_URL } from '../pages'
-import { Login, Login_PAGE_URL } from '../pages/Login';
+import { Login, LOGIN_PAGE_URL } from '../pages/Login';
 
 const AppRouter = (): React.ReactElement => {
   const { i18n } = useTranslation();
@@ -39,11 +39,11 @@ const AppRouter = (): React.ReactElement => {
   return (
     <BrowserRouter basename={basename}>
       <Switch>
-        <Route exact path={Login_PAGE_URL} component={Login} />
+        <Route exact path={LOGIN_PAGE_URL} component={Login} />
         <MainFrame>
-          <Route path={Home_PAGE_URL} component={Home} />
+          <Route path={HOME_PAGE_URL} component={Home} />
         </MainFrame>
-        <Redirect to={Login_PAGE_URL} />
+        <Redirect to={LOGIN_PAGE_URL} />
       </Switch>
     </BrowserRouter>
   );

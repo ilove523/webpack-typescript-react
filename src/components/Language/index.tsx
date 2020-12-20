@@ -36,7 +36,7 @@ const Language = (properties: any): React.ReactElement => {
   const anchorReference = React.createRef<HTMLButtonElement>();
 
   const handleLangsMenuOpen = () => {
-    setLangsAnchorElement((_isLangsMenuOpen) => !_isLangsMenuOpen);
+    setLangsAnchorElement((_isLangsMenuOpen: boolean) => !_isLangsMenuOpen);
   };
   const handleLangsMenuClose = () => {
     setLangsAnchorElement(false);
@@ -50,7 +50,7 @@ const Language = (properties: any): React.ReactElement => {
   const previousOpen = React.useRef(isLangsMenuOpen);
   React.useEffect(() => {
     if (previousOpen.current === true && isLangsMenuOpen === false) {
-      anchorReference.current!.focus();
+      anchorReference.current?.focus();
     }
     previousOpen.current = isLangsMenuOpen;
   }, [anchorReference, isLangsMenuOpen]);

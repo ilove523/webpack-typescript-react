@@ -1,12 +1,11 @@
+import icon1 from '@assets/images/icon1.png';
+import icon2 from '@assets/images/icon2.png';
+import logo from '@assets/images/logo512.png';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import { setTopNavType } from '@service/top-nav.service';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-const icon1 = '@assets/images/icon1.png';
-const icon2 = '@assets/images/icon2.png';
-const logo = '@assets/images/logo512.png';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     zIndex: 99,
   },
   content: {
-    // marginTop: theme.spacing(10)
+    marginTop: theme.spacing(10),
   },
   item: {
     display: 'block',

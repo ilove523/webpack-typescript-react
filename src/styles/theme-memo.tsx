@@ -3,8 +3,22 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Theme } from '@material-ui/core';
 import createTheme from './create-theme';
 
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface Theme {
+    appDrawer: {
+      width: React.CSSProperties['width'];
+    };
+  }
+  // 允许用 `createMuiTheme` 来配置
+  interface ThemeOptions{
+    appDrawer?: {
+      width?: React.CSSProperties['width'];
+    };
+  }
+}
+
 export default (): Theme => {
-  const isDarkModePrefered: boolean = useMediaQuery('(prefers-color-scheme: dark)');
+  const isDarkModePrefered = useMediaQuery('(prefers-color-scheme: dark)');
 
   return React.useMemo(() => createTheme({
     appDrawer: { width: 20 },
@@ -43,7 +57,8 @@ export default (): Theme => {
         selected: 'rgba(0, 0, 0, 0.08)',
       },
       // ... and we will overrides more default colors at here
-      // type: isDarkModePrefered ? 'light' : 'dark',
+      // v5 已将 type 改成 mode
+      mode: isDarkModePrefered ? 'light' : 'dark',
     },
     typography: {
       homeSectionTitle: {
@@ -81,5 +96,5 @@ export default (): Theme => {
         '"Segoe UI Symbol"',
       ].join(','),
     },
-  }), []);
+  }), [isDarkModePrefered]);
 };

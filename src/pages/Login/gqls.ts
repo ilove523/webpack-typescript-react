@@ -7,13 +7,13 @@
  */
 import gql from 'graphql-tag';
 
-export class LOGIN_DATA {
+export class LoginData {
   password!: string;
 
   account!: string;
 }
 
-export interface LOGIN_MANAGER {
+export interface ILoginManager {
   /**
    * 账号
    */
@@ -35,14 +35,13 @@ export interface LOGIN_MANAGER {
   updateTime: number | null;
 }
 
-export const GET_LOGIN = gql`
-  query LoginManager( $password: String, $account: String ) {
+export const getLoginInfo = gql`
+  query ILoginManager( $password: String, $account: String ) {
     loginManager(password: $password, account: $account) {
       account
       avatarUrl
       nickname
       updateTime
     }
-
   }
 `;

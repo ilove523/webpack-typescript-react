@@ -24,10 +24,11 @@ import {
 export const cssRule = {
     test: /\.css$/,
     use: arrayFilterEmpty([
-        miniCssExtractLoader,
-        postCssLoader,
-        resolveUrlLoader,
-        cssLoader
+      'style-loader',
+      miniCssExtractLoader,
+      // postCssLoader,
+      // resolveUrlLoader,
+      cssLoader,
     ]),
 };
 

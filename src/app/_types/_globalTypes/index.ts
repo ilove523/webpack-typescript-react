@@ -5,4 +5,5 @@
  * @LastEditors: ilove523
  * @description: ''
  */
-// export interface LOGIN { };
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Login { };

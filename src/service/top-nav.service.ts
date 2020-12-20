@@ -5,12 +5,15 @@
  * @LastEditors: ilove523
  * @description: ''
  */
-import { actions, RootState } from '@app/store';
+import { RootState } from '@app/store';
+import { topNav } from '@app/slices/top-nav';
+
+const { actions } = topNav;
 // import { useDispatch } from 'react-redux';
 
 export function setTopNavType(type: string) {
   return (dispatch: any) => {
-    dispatch(actions.topNav.setType({ type }));
+    dispatch(actions.setType({ type }));
   };
 };
 

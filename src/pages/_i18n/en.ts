@@ -7,7 +7,7 @@
  */
 import _spec from './_spec';
 
-export const en: typeof _spec = {
+const en: typeof _spec = {
   login: {
     header_title: 'LOGIN | DEMO',
     submit_btn: 'LOGIN',

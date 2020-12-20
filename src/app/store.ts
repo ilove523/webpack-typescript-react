@@ -10,11 +10,7 @@ import {
   configureStore,
   Store,
 } from '@reduxjs/toolkit';
-import { topNav } from '@src/app/slices/top-nav';
-
-export const actions = {
-  topNav: topNav.actions,
-};
+import { topNav } from '@app/slices/top-nav';
 
 const rootReducer = combineReducers({
   topNav: topNav.reducer,

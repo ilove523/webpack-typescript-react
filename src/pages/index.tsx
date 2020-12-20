@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Management = (): React.ReactElement => (
+const PageManagement = (): React.ReactElement => (
   <div className='home'/>
 );
 
 const HOME_PAGE_URL = '/';
 
-export { Management, HOME_PAGE_URL };
+export { PageManagement, HOME_PAGE_URL };

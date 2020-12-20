@@ -7,7 +7,7 @@
  */
 import _spec from './_spec';
 
-export const zh: typeof _spec = {
+const zh: typeof _spec = {
   login: {
     header_title: '登录 | demo',
     submit_btn: '登录',

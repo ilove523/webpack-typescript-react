@@ -8,7 +8,7 @@
 
 import React, { CSSProperties } from 'react';
 
-import StrawberryIcon from '@images/strawberry.component.svg';
+import StrawberryIcon from '@assets/images/strawberry.component.svg';
 
 export interface IProperties {
   style?: CSSProperties;

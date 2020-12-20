@@ -42,9 +42,9 @@ module.exports = {
             'error',
             {
                 'cases': {
-                    'kebabCase': false,
-                    'camelCase': false,
-                    'pascalCase': false
+                    'kebabCase': true,
+                    'camelCase': true,
+                    'pascalCase': true
                 }
             }
         ],
@@ -82,6 +82,7 @@ module.exports = {
                 ts: 'never',
                 tsx: 'never',
                 json: 'never',
+                jsx: 'never',
                 js: 'never',
             },
         ],
@@ -144,6 +145,19 @@ module.exports = {
                 extensions: ['.tsx', '.ts', '.jsx', '.js'],
             },
             typescript: {},
+            alias: {
+              map: [
+                ["@src", path.join(__dirname, "src")],
+                ["@styles", path.join(__dirname, "src", "styles")],
+                ["@components", path.join(__dirname, "src", "components")],
+                ["@pages", "src/pages"],
+                ["@app", "src/app"],
+                ["@service", "src/service"],
+                ["@routers", "src/routers"],
+                ["@assets", "src/assets"],
+                ["@i18n", "src/i18n"]
+              ],
+            },
         },
         react: {
             // Tells eslint-plugin-react to automatically detect the version of React to use

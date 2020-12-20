@@ -6,7 +6,7 @@
  * @description: ''
  */
 import { Resource } from 'i18next';
-import { Lang } from '../consts';
+import { Lang } from '@i18n/consts';
 import en from './en';
 import zh from './zh';
 

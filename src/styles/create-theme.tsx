@@ -2,9 +2,18 @@ import {
   Theme,
   ThemeOptions,
   createMuiTheme,
-  responsiveFontSizes,
   unstable_createMuiStrictModeTheme,
 } from '@material-ui/core/styles';
+
+export default function createMyTheme(options: ThemeOptions): Theme {
+  const theme = unstable_createMuiStrictModeTheme(options);
+  return createMuiTheme({
+    ...theme,
+    appDrawer: {
+      width: 225,
+    },
+  });
+}
 
 /**
  * @see https://material-ui.com/zh/guides/typescript/#customization-of-theme
@@ -17,7 +26,7 @@ declare module '@material-ui/core/styles/createMuiTheme' {
     };
   }
   // 允许用 `createMuiTheme` 来配置
-  interface ThemeOptions {
+  interface ThemeOptions{
     appDrawer?: {
       width?: React.CSSProperties['width'];
     };
@@ -54,15 +63,4 @@ declare module '@material-ui/core/styles/createTypography' {
   interface Typography extends Record<GfashionVariant, TypographyStyle>, FontStyle, TypographyUtils {}
 
   interface TypographyOptions extends Partial<Record<GfashionVariant, TypographyStyleOptions> & FontStyleOptions> {}
-}
-
-export default function createMyTheme(options: ThemeOptions): Theme {
-  const theme = unstable_createMuiStrictModeTheme();
-  return createMuiTheme({
-    ...theme,
-    appDrawer: {
-      width: 225,
-    },
-    ...options,
-  });
 }

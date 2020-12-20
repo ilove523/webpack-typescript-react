@@ -6,11 +6,11 @@
  * @description: ''
  */
 import { I18N_NS as demoNs } from '@pages/_i18n';
-import { zh as demoResultZh } from '@pages/_i18n/zh';
+import demoZh from '@pages/_i18n/zh';
 import { Spec } from './_spec';
 
 const zh: Spec = {
-  [demoNs]: demoResultZh,
+  [demoNs]: demoZh,
 };
 
 export default zh;

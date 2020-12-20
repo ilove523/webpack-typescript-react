@@ -12,9 +12,9 @@
 import i18next from 'i18next';
 import { EnumValues } from 'enum-values';
 import { initReactI18next } from 'react-i18next';
-import { Lang, DEFAULT_LANG } from '@i18n/consts';
-import resources from '@i18n/resources';
-import { getLang } from '@i18n/utils';
+import resources from './resources';
+import { getLang } from './utils';
+import { Lang, DEFAULT_LANG } from './consts';
 
 i18next
   .use(initReactI18next) // bind react-i18next to the instance

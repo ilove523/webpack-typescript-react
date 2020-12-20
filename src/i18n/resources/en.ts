@@ -6,11 +6,11 @@
  * @description: ''
  */
 import { I18N_NS as demoNs } from '@pages/_i18n';
-import { en as demoResponseEn } from '@pages/_i18n/en';
+import demoEn from '@pages/_i18n/en';
 import { Spec } from './_spec';
 
 export const en: Spec = {
-  [demoNs]: demoResponseEn,
+  [demoNs]: demoEn,
 };
 
 export default en;

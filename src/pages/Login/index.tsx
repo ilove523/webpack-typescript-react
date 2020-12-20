@@ -11,7 +11,7 @@ import { object, string } from 'yup';
 import Language from '@components/Language';
 import Loading from '@components/Loading';
 
-import { GET_LOGIN, LOGIN_DATA } from './gqls';
+import { getLoginInfo, LoginData } from './gqls';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -59,9 +59,9 @@ export function Login(): React.ReactElement {
   const classes = useStyles();
   const { t } = useTranslation(I18N_NS);
   const history = useHistory();
-  const formInitData = new LOGIN_DATA();
+  const formInitData = new LoginData();
   const fields = keyPathMirror(formInitData);
-  const [formData, setFormData] = React.useState<LOGIN_DATA>(formInitData);
+  const [formData, setFormData] = React.useState<LoginData>(formInitData);
   const [alertState, setAlertState] = React.useState({
     open: false,
     message: '',
@@ -72,7 +72,7 @@ export function Login(): React.ReactElement {
     password: string().required(),
   });
 
-  const [getLogin, { loading: loginLoading, data: loginInfo }] = useLazyQuery(GET_LOGIN);
+  const [getLogin, { loading: loginLoading, data: loginInfo }] = useLazyQuery(getLoginInfo);
 
   if (loginInfo) {
     history.push('/home');
@@ -159,4 +159,4 @@ export function Login(): React.ReactElement {
   );
 }
 
-export const Login_PAGE_URL = '/login';
+export const LOGIN_PAGE_URL = '/login';
