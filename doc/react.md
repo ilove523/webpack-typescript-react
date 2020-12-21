@@ -1,7 +1,7 @@
 <!--
  * @author: ilove523 <wush3w@126.com>
  * @Date: 2020-12-16 16:20:09
- * @LastEditTime: 2020-12-16 16:36:40
+ * @LastEditTime: 2020-12-21 15:39:28
  * @LastEditors: ilove523
  * @description: ''
 -->
@@ -16,9 +16,10 @@ yarn add react-i18next
 yarn add react-router-dom
 ```
 
-## for typescript
+## Type-Definitions in typescript for React & Redux
 ```sh
 yarn add @types/react
+yarn add -D @types/react @types/react-dom @types/react-redux prop-types
 ```
 
 ## for other

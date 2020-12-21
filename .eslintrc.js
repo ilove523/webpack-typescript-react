@@ -1,7 +1,7 @@
 /*
  * @author: ilove523 <wush3w@126.com>
  * @Date: 2020-12-17 14:58:08
- * @LastEditTime: 2020-12-18 16:08:38
+ * @LastEditTime: 2020-12-21 16:17:06
  * @LastEditors: ilove523
  * @description: ''
  */
@@ -58,7 +58,18 @@ module.exports = {
                 ],
             }
         ],
-        '@typescript-eslint/camelcase': 0,
+        // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v24.0.0/docs/rules/prevent-abbreviations.md
+        'unicorn/prevent-abbreviations': [
+            'error',
+            {
+                'checkDefaultAndNamespaceImports': 'internal',
+                'checkShorthandImports': false,
+                'checkProperties': true,
+                'checkVariables': false,
+                'checkFilenames': false
+            }
+        ],
+        '@typescript-eslint/camelcase': 'off',
         // https://github.com/typescript-eslint/typescript-eslint/blob/v4.7.0/packages/eslint-plugin/docs/rules/no-empty-interface.md
         // This rule will silence warnings about extending a single interface without adding additional members
         '@typescript-eslint/no-empty-interface': [

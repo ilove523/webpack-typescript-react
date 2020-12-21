@@ -2,14 +2,10 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  // "typescript.validate.enable": false,
 
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "typescript.tsdk": "../node_modules/typescript/lib",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "typescript.tsdk": "./node_modules/typescript/lib",
 
   "search.exclude": {
     "**/node_modules": true,
@@ -29,7 +25,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -52,5 +48,6 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "commentTranslate.targetLanguage": "zh-CN"
+  "markdown-image.local.path": "./images",
+  "compile-hero.disable-compile-files-on-did-save-code": true
 }

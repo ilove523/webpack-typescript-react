@@ -115,8 +115,8 @@ export function Login(): React.ReactElement {
         message={alertState.message}
       />
 
-      {/* <Box display="flex" className="box" flexDirection="row-reverse"> */}
-      <Box component='div' className='box'>
+      <Box display='flex' className='box' flexDirection='row-reverse'>
+      {/* <Box className='box'> */}
         <Card className={classes.card}>
           <Language className={classes.top} />
 

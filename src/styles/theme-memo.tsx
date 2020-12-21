@@ -58,7 +58,7 @@ export default (): Theme => {
       },
       // ... and we will overrides more default colors at here
       // v5 已将 type 改成 mode
-      mode: isDarkModePrefered ? 'light' : 'dark',
+      type: isDarkModePrefered ? 'light' : 'dark',
     },
     typography: {
       homeSectionTitle: {

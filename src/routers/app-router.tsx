@@ -1,7 +1,7 @@
 /**
  * @author: ilove523 <wush3w@126.com>
  * @Date: 2020-12-16 16:15:04
- * @LastEditTime: 2020-12-17 10:24:49
+ * @LastEditTime: 2020-12-21 09:15:25
  * @LastEditors: ilove523
  * @description: ''
  */
@@ -23,7 +23,7 @@ import { Home, HOME_PAGE_URL } from '@pages/Home';
  *             avoid circular dependency & good for split chunks + lazy load
  */
 // import { Management, HOME_PAGE_URL } from '../pages'
-import { Login, LOGIN_PAGE_URL } from '../pages/Login';
+import { Login, LOGIN_PAGE_URL } from '@pages/Login';
 
 const AppRouter = (): React.ReactElement => {
   const { i18n } = useTranslation();
