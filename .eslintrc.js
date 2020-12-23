@@ -1,7 +1,7 @@
 /*
  * @author: ilove523 <wush3w@126.com>
  * @Date: 2020-12-17 14:58:08
- * @LastEditTime: 2020-12-21 16:17:06
+ * @LastEditTime: 2020-12-23 17:48:43
  * @LastEditors: ilove523
  * @description: ''
  */
@@ -37,7 +37,6 @@ module.exports = {
     },
     rules: {
         // 关闭 ESLint 驼峰规则校验
-        camelcase: 'off',
         'unicorn/filename-case': [
             'error',
             {
@@ -58,13 +57,14 @@ module.exports = {
                 ],
             }
         ],
+        'unicorn/no-reduce': 'off',
         // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v24.0.0/docs/rules/prevent-abbreviations.md
         'unicorn/prevent-abbreviations': [
             'error',
             {
                 'checkDefaultAndNamespaceImports': 'internal',
                 'checkShorthandImports': false,
-                'checkProperties': true,
+                'checkProperties': false,
                 'checkVariables': false,
                 'checkFilenames': false
             }
@@ -127,6 +127,7 @@ module.exports = {
                     'Theme',
                     'ThemeOptions',
                     'TypographyOptions',
+                    'Filter',
                 ],
 
             },

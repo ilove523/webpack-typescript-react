@@ -1,3 +1,10 @@
+/*
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-21 08:57:55
+ * @LastEditTime: 2020-12-23 18:03:43
+ * @LastEditors: ilove523
+ * @description: ''
+ */
 declare module '*.png' {
   const content: string;
   export = content;
@@ -45,6 +52,11 @@ declare module '*.module.css' {
   export default classes;
 }
 
+declare module '*.css' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
 declare module '*.module.scss' {
   const classes: { readonly [key: string]: string };
   export default classes;
@@ -53,6 +65,14 @@ declare module '*.module.scss' {
 declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
   export default classes;
+}
+
+declare namespace TodoModel {
+  enum Filter {
+    SHOW_ALL = 'all',
+    SHOW_ACTIVE = 'active',
+    SHOW_COMPLETED = 'completed'
+  }
 }
 
 declare const IS_PROD: boolean;

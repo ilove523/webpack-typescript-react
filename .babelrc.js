@@ -1,3 +1,10 @@
+/*
+ * @author: ilove523 <wush3w@126.com>
+ * @Date: 2020-12-21 08:57:55
+ * @LastEditTime: 2020-12-23 16:11:38
+ * @LastEditors: ilove523
+ * @description: ''
+ */
 /**
  * Created by: Andrey Polyakov (andrey@polyakov.im)
  */
@@ -33,6 +40,7 @@ module.exports = (api) => {
             '@babel/plugin-proposal-export-namespace-from',
             '@babel/plugin-proposal-throw-expressions',
             '@babel/proposal-object-rest-spread',
+            'react-hot-loader/babel',
             // Applies the react-refresh Babel plugin on non-production modes only
             mode !== 'production' && 'react-refresh/babel',
             // [
